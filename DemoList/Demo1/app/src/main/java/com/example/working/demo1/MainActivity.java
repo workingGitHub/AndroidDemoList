@@ -1,19 +1,23 @@
 package com.example.working.demo1;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ComponentName;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-
+    static public String APPIFINDEX = "appifindex";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,35 +25,32 @@ public class MainActivity extends Activity {
 
         //获取ListView组件信息
         ListView _listview = (ListView)findViewById(R.id.DemoList);
-        _listview.setAdapter(AppListInfo.GetSimpleAdapter());
+        ArrayAdapter<String> _adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1 ,AppListInfo._applist);
+        _listview.setAdapter(_adapter);
+
         _listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //todo: 单击的时候调用
+                Toast.makeText(MainActivity.this,String.format("Click:ifIndex:%d",position),Toast.LENGTH_SHORT).show();
+                Intent _intent = new Intent(MainActivity.this,AppListInfo._classname[position]);
+                _intent.putExtra(APPIFINDEX, position);
+
+                startActivity(_intent);
+
             }
         });
         _listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 //长按查看详细信息
+                String _info = AppListInfo._appInfo[position];
+                Toast.makeText(MainActivity.this,String.format("LongClick:ifIndex:%d [%s]",position,_info),Toast.LENGTH_LONG).show();
+
                 return false;
             }
         });
+
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
