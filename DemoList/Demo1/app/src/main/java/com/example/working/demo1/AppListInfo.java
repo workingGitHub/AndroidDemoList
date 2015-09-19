@@ -28,7 +28,7 @@ public class AppListInfo {
             "2.Hello Word",
     };
     static public String[] _appInfo = new String[]{
-            "1.Hello Word",
+            "1.第一个实例，简单的HelloWorld界面。使用TextView控件",
             "2.Hello Word",
     };
     static public Class[] _classname = new Class[]{

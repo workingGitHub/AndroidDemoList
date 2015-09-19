@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
+    android{compileOptions.encoding="GBK"}
     defaultConfig {
         applicationId "com.example.working.demo1"
         minSdkVersion 15
