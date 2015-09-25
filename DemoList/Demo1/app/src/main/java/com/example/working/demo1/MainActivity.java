@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-    static public String APPIFINDEX = "appifindex";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +31,11 @@ public class MainActivity extends Activity {
         _listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this,String.format("Click:ifIndex:%d",position),Toast.LENGTH_SHORT).show();
-                Intent _intent = new Intent(MainActivity.this,AppListInfo._classname[position]);
-                _intent.putExtra(APPIFINDEX, position);
-
-                startActivity(_intent);
+                Toast.makeText(MainActivity.this, String.format("Click:ifIndex:%d", position), Toast.LENGTH_SHORT).show();
+                if (position < AppListInfo._classname.length) {
+                    Intent _intent = new Intent(MainActivity.this, AppListInfo._classname[position]);
+                    startActivity(_intent);
+                }
 
             }
         });
@@ -43,10 +43,11 @@ public class MainActivity extends Activity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 //长按查看详细信息
-                String _info = AppListInfo._appInfo[position];
-                Toast.makeText(MainActivity.this,String.format("LongClick:ifIndex:%d [%s]",position,_info),Toast.LENGTH_LONG).show();
-
-                return false;
+                if(position < AppListInfo._appInfo.length) {
+                    String _info = AppListInfo._appInfo[position];
+                    Toast.makeText(MainActivity.this, String.format("%s", _info), Toast.LENGTH_LONG).show();
+                }
+                return true;
             }
         });
 

@@ -17,8 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DemoList.Demo1"
-            android:label="Demo1" >
+            android:name=".DemoList.Demo1">
+        </activity>
+        <activity
+            android:name=".DemoList.Demo2" >
+        </activity>
+        <activity
+            android:name=".DemoList.Demo3" >
+        </activity>
+        <activity
+            android:name=".DemoList.Demo4" >
         </activity>
     </application>
 
