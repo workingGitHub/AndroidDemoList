@@ -6,12 +6,12 @@ import android.os.Bundle;
 import com.example.working.demo1.R;
 
 /**
- * Created by Administrator on 2015/9/25 0025.
+ * Created by Administrator on 2015/9/27 0027.
  */
-public class Demo4  extends Activity{
+public class Demo5 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo4_layout);
+        setContentView(R.layout.demo5_layout);
     }
 }

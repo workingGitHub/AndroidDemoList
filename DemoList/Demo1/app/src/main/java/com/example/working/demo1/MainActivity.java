@@ -14,8 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
-
+//∑œ∆˙µÙ¡À£¨ π”√ListPerfenceActivity
+/*
 public class MainActivity extends Activity {
 
     @Override
@@ -55,3 +55,4 @@ public class MainActivity extends Activity {
 
 
 }
+*/

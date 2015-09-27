@@ -1,17 +1,15 @@
-package com.example.working.demo1.DemoList;
+package com.example.working.demo1;
 
-import android.app.Activity;
 import android.os.Bundle;
-
-import com.example.working.demo1.R;
+import android.preference.PreferenceActivity;
 
 /**
  * Created by Administrator on 2015/9/25 0025.
  */
-public class Demo4  extends Activity{
+public class ListPerfenceActivity extends PreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo4_layout);
+        addPreferencesFromResource(R.xml.listactivity);
     }
 }

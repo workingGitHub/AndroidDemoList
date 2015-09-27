@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+ <PreferenceCategory android:title="第一章">
+    <Preference android:title="1.Hello Word" android:summary="第一个实例，简单的HelloWorld界面。使用TextView控件">
+     <intent android:targetClass="com.example.working.demo1.DemoList.Demo1" android:targetPackage="com.example.working.demo1"></intent>
+    </Preference>
+     <!--
+         static public String[] _applist = new String[]{
+            "1.Hello Word",
+            "2.Coder Hello Word",
+            "3.SelfView",
+            "4.layout"
+    };
+    static public String[] _appInfo = new String[]{
+            "1.第一个实例，简单的HelloWorld界面。使用TextView控件",
+            "2.使用代码完成UI的布局（P44）",
+            "3.使用自定义控件，画一个跟随手指的小球（P48）",
+            "4.显示各种布局的情况"
+    };
+     -->
+     <Preference android:title="2.Coder Hello Word" android:summary="使用代码完成UI的布局（P44）">
+         <intent android:targetClass="com.example.working.demo1.DemoList.Demo2" android:targetPackage="com.example.working.demo1"></intent>
+     </Preference>
+     <Preference android:title="3.SelfView" android:summary="使用自定义控件，画一个跟随手指的小球（P48）">
+         <intent android:targetClass="com.example.working.demo1.DemoList.Demo3" android:targetPackage="com.example.working.demo1"></intent>
+     </Preference>
+     <Preference android:title="4.layout" android:summary="显示各种布局的情况(P50~64）">
+         <intent android:targetClass="com.example.working.demo1.DemoList.Demo4" android:targetPackage="com.example.working.demo1"></intent>
+     </Preference>
+     <Preference android:title="5.TextView" android:summary="UI组件TextView的各种形态">
+         <intent android:targetClass="com.example.working.demo1.DemoList.Demo5" android:targetPackage="com.example.working.demo1"></intent>
+     </Preference>
+
+ </PreferenceCategory>
+</PreferenceScreen>

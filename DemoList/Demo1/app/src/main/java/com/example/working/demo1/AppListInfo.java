@@ -23,7 +23,7 @@ class AppData{
         _info = info;
         _class = myClass;
     }
-}*/
+}
 
 public class AppListInfo {
     static public String[] _applist = new String[]{
@@ -46,3 +46,4 @@ public class AppListInfo {
     };
 
 }
+*/

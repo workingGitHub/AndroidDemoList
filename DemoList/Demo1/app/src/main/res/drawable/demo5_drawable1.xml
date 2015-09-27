@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置背景颜色-->
+    <solid android:color="#0000"></solid>
+    <!--设置边框-->
+    <stroke android:color="#f00" android:width="4px"></stroke>
+    <!--指定四个圆角半径-->
+    <corners android:topLeftRadius="20px"
+        android:topRightRadius="5px"
+        android:bottomLeftRadius="20px"
+        android:bottomRightRadius="5px"></corners>
+    <gradient android:startColor="#f00"
+        android:centerColor="#0f0"
+        android:endColor="#00f"
+        android:type="sweep"></gradient>
+</shape>

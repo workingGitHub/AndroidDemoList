@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView Size :10px"
+        android:textSize="10pt"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="set 中间忽略,字母大写set 中间忽略,字母大写set 中间忽略,字母大写set 中间忽略,字母大写"
+        android:ellipsize="middle"
+        android:textAllCaps="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="电话：18674010529，邮箱：working12.3@126.com"
+        android:autoLink="phone|email"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置文字颜色大小并使用阴影"
+        android:shadowColor="#00f"
+        android:shadowDx="10.0"
+        android:shadowDy="6.0"
+        android:shadowRadius="3.0"
+        android:textColor="#f00"
+        android:textSize="15pt"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试密码框"
+        android:password="true"/>
+    <CheckedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可以勾选的TextView"
+        android:checkMark="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="背景使用绘制背景"
+        android:background="@drawable/demo5_drawable1"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EditText"
+        android:id="@+id/editText" />
+
+</LinearLayout>
