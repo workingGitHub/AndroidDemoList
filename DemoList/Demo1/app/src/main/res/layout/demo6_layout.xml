@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical">
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/demo6_btn1"
+        android:text="增大透明度"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/demo6_btn2"
+        android:text="降低透明度"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/demo6_btn3"
+        android:text="下一张"/>
+</LinearLayout>
+    <ImageView
+        android:id="@+id/demo6_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:src="@drawable/p1"
+        android:scaleType="fitCenter"/>
+    <ImageView
+        android:id="@+id/demo6_image2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@drawable/button_select"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <ZoomButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/zoom_down"
+            android:src="@android:drawable/btn_minus"/>
+        <ZoomButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/zoom_up"
+            android:src="@android:drawable/btn_plus"/>
+    </LinearLayout>
+    <ZoomControls
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"></ZoomControls>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <QuickContactBadge
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/linkin"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试用户，QuickContackBadge，点击就可以进入拨号键"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

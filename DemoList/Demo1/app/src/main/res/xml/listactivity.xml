@@ -30,6 +30,8 @@
      <Preference android:title="5.TextView" android:summary="UI组件TextView的各种形态">
          <intent android:targetClass="com.example.working.demo1.DemoList.Demo5" android:targetPackage="com.example.working.demo1"></intent>
      </Preference>
-
+     <Preference android:title="6.ImageView" android:summary="图片浏览器功能，支持细节放大显示。以及图片循环显示。">
+         <intent android:targetClass="com.example.working.demo1.DemoList.Demo6" android:targetPackage="com.example.working.demo1"></intent>
+     </Preference>
  </PreferenceCategory>
 </PreferenceScreen>
