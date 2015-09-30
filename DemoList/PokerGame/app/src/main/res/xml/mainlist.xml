@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="图片列表" android:summary="使用ListView显示图片列表">
+        <intent android:targetClass="com.example.working.pokergame.ListViewActivity" android:targetPackage="com.example.working.pokergame"></intent>
+    </Preference>
+</PreferenceScreen>
