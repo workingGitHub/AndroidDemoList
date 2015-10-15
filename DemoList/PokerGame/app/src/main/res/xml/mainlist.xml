@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="图片显示">
     <Preference android:title="图片列表" android:summary="使用ListView显示图片列表">
         <intent android:targetClass="com.example.working.pokergame.ListViewActivity" android:targetPackage="com.example.working.pokergame"></intent>
     </Preference>
+    <Preference android:title="图片表格" android:summary="使用GridView显示图片列表">
+        <intent android:targetClass="com.example.working.pokergame.GridViewActivity" android:targetPackage="com.example.working.pokergame"></intent>
+    </Preference>
+    <Preference android:title="图片动画" android:summary="自动播放图片">
+        <intent android:targetClass="com.example.working.pokergame.AdapterViewFlipperActivity" android:targetPackage="com.example.working.pokergame"></intent>
+    </Preference>
+    <Preference android:title="堆叠图片" android:summary="叠在一起的图片">
+        <intent android:targetClass="com.example.working.pokergame.StackViewActivity" android:targetPackage="com.example.working.pokergame"></intent>
+    </Preference>
+    </PreferenceCategory>
 </PreferenceScreen>
