@@ -13,5 +13,8 @@
     <Preference android:title="堆叠图片" android:summary="叠在一起的图片">
         <intent android:targetClass="com.example.working.pokergame.StackViewActivity" android:targetPackage="com.example.working.pokergame"></intent>
     </Preference>
+        <Preference android:title="图片列表" android:summary="像炉石一样显示图片">
+            <intent android:targetClass="com.example.working.pokergame.ViewSwitcherList" android:targetPackage="com.example.working.pokergame"></intent>
+        </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

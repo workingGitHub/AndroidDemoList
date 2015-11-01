@@ -1,0 +1,19 @@
+<resources>
+    <string name="crime">陋习详情</string>
+    <string name="hint">输入陋习</string>
+    <string name="title">标题</string>
+    <string name="details">细节</string>
+    <string name="issave">是否保存？</string>
+    <string name="crimes">陋习列表</string>
+    <string name="dateofcrime">陋习产生时间</string>
+    <string name="timeofcrime">陋习产生时间</string>
+    <string name="settime">设置时间</string>
+    <string name="setdate">设置日期</string>
+    <string name="newcrime">新建陋习</string>
+    <string name="subtitle">子标题</string>
+    <string name="showsubtitle">显示子标题</string>
+    <string name="hidesubtitle">隐藏子标题</string>
+    <string name="app_name">陋习管理器</string>
+    <string name="deleteitem">删除陋习</string>
+
+</resources>

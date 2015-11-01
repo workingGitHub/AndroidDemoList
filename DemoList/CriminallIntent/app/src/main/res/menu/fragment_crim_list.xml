@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_fragmentlist"
+        android:icon="@drawable/footbal_ball"
+        android:title="@string/newcrime"
+        android:showAsAction="ifRoom|withText"
+        />
+
+    <item android:id="@+id/menu_subtitle"
+        android:icon="@drawable/minion"
+        android:title="@string/showsubtitle"
+        android:showAsAction="ifRoom|withText"
+        />
+</menu>
