@@ -44,6 +44,10 @@ public class CrimLab {
     {
         _crimList.add(c);
     }
+    public void DelCrim(Crim c)
+    {
+        _crimList.remove(c);
+    }
     public ArrayList<Crim> get_crimList() {
         return _crimList;
     }

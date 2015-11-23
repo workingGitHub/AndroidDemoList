@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NavUtils;
@@ -20,6 +23,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -34,6 +38,7 @@ public class CrimFrament extends Fragment {
     public static final String EXTRA_DATE = "date";
     public static final int REQUEST_CODE = 0;
     private Button _button;
+    private ImageButton _btn_camera;
     public static CrimFrament newInstance(UUID id)
     {
         Bundle args = new Bundle();
@@ -144,6 +149,7 @@ public class CrimFrament extends Fragment {
         View _v = inflater.inflate(R.layout.crimeframent,container,false);
         EditText _edittext = (EditText)_v.findViewById(R.id.crime_title);
         _button = (Button)_v.findViewById(R.id.datebtn);
+
         //向上的导航条
         if(NavUtils.getParentActivityIntent(getActivity()) != null) {
             getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -181,10 +187,32 @@ public class CrimFrament extends Fragment {
             public void onClick(View v) {
                 FragmentManager fm = getFragmentManager();
                 SelectFragment selectpack = SelectFragment.newInstance(_crim.get_date());
-                selectpack.setTargetFragment(CrimFrament.this,REQUEST_CODE);
+                selectpack.setTargetFragment(CrimFrament.this, REQUEST_CODE);
                 selectpack.show(fm, EXTRA_DATE);
             }
         });
+
+        _btn_camera = (ImageButton) _v.findViewById(R.id.btn_startcamera);
+        _btn_camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),CrimPageActivity.class);
+                startActivity(i);
+                return;
+            }
+        });
+
+        //判断设备是否支持摄像头
+        PackageManager pm = getActivity().getPackageManager();
+        boolean isSupportCamera = pm.hasSystemFeature(PackageManager.FEATURE_CAMERA) ||
+                            pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT) ||
+                            Build.VERSION.SDK_INT < Build.VERSION_CODES.GINGERBREAD ||
+                            Camera.getNumberOfCameras() > 0;
+
+        if(!isSupportCamera)
+        {
+            _btn_camera.setEnabled(false);
+        }
         return _v;
     }
 }

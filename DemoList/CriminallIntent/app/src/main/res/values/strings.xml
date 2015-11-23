@@ -15,5 +15,6 @@
     <string name="hidesubtitle">隐藏子标题</string>
     <string name="app_name">陋习管理器</string>
     <string name="deleteitem">删除陋习</string>
+    <string name="getpic">拍照！</string>
 
 </resources>
