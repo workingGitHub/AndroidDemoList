@@ -1,0 +1,26 @@
+20:20 2015/12/5 星期六
+Q:启动AVD的时候显示Cannot reload AVD list: cvc-enumeration-valid: Value '280dpi' is not facet-valid with respect to enumeration '[ldpi, mdpi, tvdpi, hdpi, xhdpi, 400dpi, xxhdpi, 560dpi, xxxhdpi]'. It must be a value from the enumeration.
+Error parsing D:\sdkforas\android-sdk-windows\system-images\android-22\android-wear\armeabi-v7a\devices.xml
+cvc-enumeration-valid: Value '280dpi' is not facet-valid with respect to enumeration '[ldpi, mdpi, tvdpi, hdpi, xhdpi, 400dpi, xxhdpi, 560dpi, xxxhdpi]'. It must be a value from the enumeration.
+Error parsing D:\sdkforas\android-sdk-windows\system-images\android-22\android-wear\x86\devices.xml
+
+A： 解决方案：用/sdk/tools/lib/devices.xml去替换system-images\android-22\android-wear\x86\devices.xml和system-images\android-22\android-wear\armeabi-v7a\devices.xml中的devices.xml,问题解决!
+
+
+Q:软件运行起来之后ActionBar无法显示
+
+A:Activity需要继承ActionBarActivity否则无法显示
+
+Q:新建item无法显示在图标上
+
+A：不能使用原生的android:showAsAction，
+	需要使用app:showAsAction="always" 
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="always" />
+</menu>
