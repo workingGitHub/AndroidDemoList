@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.UUID;
 
 /**
  * Created by Administrator on 2015/11/26 0026.
@@ -48,5 +49,17 @@ public class AccountLib {
 
     public ArrayList<Account> getmAccountList() {
         return mAccountList;
+    }
+
+    public Account getAccount(UUID id)
+    {
+        for(Account c:mAccountList)
+        {
+            if(c.getmId().equals(id))
+            {
+                return c;
+            }
+        }
+        return null;
     }
 }

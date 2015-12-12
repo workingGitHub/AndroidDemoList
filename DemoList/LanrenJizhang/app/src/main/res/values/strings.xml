@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">懒人记账</string>
     <string name="accountlist_activity_name">记账列表</string>
+    <string name="account_activity_name">账目详情</string>
     <string name="menu_accout_list_addaccout">记一笔</string>
+    <string name="activity_accout_title">花费类型：</string>
+    <string name="activity_accout_titlehint">请输入花费类型</string>
+    <string name="activity_accout_cost">花费金额：</string>
+    <string name="activity_accout_costhint">请输入花费金额</string>
+    <string name="activity_accout_date">花费日期</string>
 
+    <string name="fragment_dateselect_setdate">设置日期</string>
+    <string name="fragment_dateselect_settime">设置时间</string>
+
+    <string name="fragment_dateselect_title">时间设置器</string>
 
 </resources>

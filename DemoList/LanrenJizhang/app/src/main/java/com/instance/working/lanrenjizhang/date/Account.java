@@ -1,5 +1,7 @@
 package com.instance.working.lanrenjizhang.date;
 
+import android.text.format.DateFormat;
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -10,6 +12,8 @@ import java.util.UUID;
  */
 
 public class Account {
+    public static final float INVALID_FLOAT = -1;
+
     private static String STRING_ID = "ID";
     private static String STRING_NAME = "NAME";
     private static String STRING_DATE = "DATE";
@@ -21,14 +25,19 @@ public class Account {
     private Date mDate;
     private float mCost;
 
-    Account()
+    public Account()
     {
         mId = UUID.randomUUID();
         mDate = new Date();
+        mCost = INVALID_FLOAT;
     }
 
     public Date getmDate() {
         return mDate;
+    }
+    public String getmDateString(String sFromat) {
+        DateFormat _dateformat = new DateFormat();
+        return _dateformat.format(sFromat,mDate).toString();
     }
 
     public UUID getmId() {

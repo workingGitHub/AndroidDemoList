@@ -79,8 +79,9 @@ public class AccoutListFragment extends ListFragment {
             Account account = getItem(position);
 
             _title.setText(account.getmRemark());
+
             DateFormat _dateformat = new DateFormat();
-            _date.setText(_dateformat.format("EE MMM dd hh:mm:ss  yyyy",account.getmDate()).toString());
+            _date.setText(account.getmDateString("EE MMM dd hh:mm:ss  yyyy"));
             _cost.setText(String.format("%.2f", account.getmCost())
 
 
